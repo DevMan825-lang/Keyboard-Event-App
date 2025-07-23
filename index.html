@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="child-container">
+      <h3>Key Press Event App</h3>
+      <br> 
+     <input type="text" id="myInput" placeholder="Type here something..."/> <br>
+     <p id="keypressed">Key pressed: </p>
+     <p id="keycode">Key code: </p>
+     <p id="charcode">Char code: </p>
+     <p id="keytype">Key type: </p>
+    </div>
+  </div>
+  
+  <script type="text/javascript">
+    document.getElementById("myInput").addEventListener("keydown", function(event){
+  console.log(event.key); 
+   document.getElementById("keypressed").innerHTML = "Key pressed:" + " " + event.key; 
+   document.getElementById("keycode").innerHTML = "Key code:" + " " + event.keyCode; 
+   document.getElementById("charcode").innerHTML = "Char code:" + " " + event.key.charCodeAt(0); 
+   document.getElementById("keytype").innerHTML = "Key type:" + " " + event.type; 
+
+}); 
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
